@@ -1,0 +1,658 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition:all 0.3s ease;
+}
+body{
+    background-color: rgb(22, 22, 22);
+}
+.container{
+    padding:20px 40px 20px 70px;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    background-color: black;
+    position:sticky;
+    top:0;
+    z-index:200;
+}
+header h1{
+    text-transform: uppercase;
+    background: -webkit-radial-gradient(270%, #eee, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position:absolute;
+    visibility: visible;
+    transition: 0s all ease;
+}
+header nav ul li:not(:last-child){
+    transition: animation-name 4s ease;
+    animation-name: removePaddingList;
+    animation-duration: 0.9s;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+header nav ul li a{
+    padding:10px 15px 11px;
+}
+header nav ul li:hover a{
+    color:blue;
+}
+header nav ul li button{
+    padding:10px 25px;
+    background-image: linear-gradient(to right,orange 20%,red,purple);
+    border:none;
+    text-transform: capitalize;
+    color:white;
+    cursor: pointer;
+}
+header nav i{
+    visibility: hidden;
+    color: white;
+    font-size:30px;
+    transition: 0s all ease;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-transform: capitalize;
+    color:white;
+    height:79vh;
+    line-height:100px;
+}
+#home h1{
+    font-size:90px;
+}
+#home h1 span{
+    background: -webkit-linear-gradient(right,orange,red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#home h3{
+    font-size:50px;
+    color:blueviolet;
+}
+#home button{
+    padding:20px 60px;
+    background-image: linear-gradient(to right,orange,red,purple);
+    border:none;
+    text-transform: capitalize;
+    border-radius:15px;
+    color:white;
+    font-size:20px;
+    margin-top:20px;
+    cursor:pointer;
+}
+#home button:hover{
+    background-image:  linear-gradient(blueviolet,blueviolet);
+}
+
+#about{
+    display: flex;
+    align-items: center;
+    height:79vh;
+    padding:0 0 0 8%;
+}
+#about i , #sign i{
+    font-size:200px;
+    color:white;
+    padding:8% 12%;
+    background-image: linear-gradient(to right,rgb(69, 238, 187) 30%,rgb(49, 99, 238),rgb(201, 89, 201));
+}
+#about div , #sign div{
+    width:600px;
+    font-weight:bold;
+    margin-left:50px;
+}
+#about div h4 , #sign div h4{
+    font-size:20px;
+    text-transform: uppercase;
+    color:rgb(192, 4, 76);
+    margin-bottom:20px;
+}
+#about div h2 , #sign div h2{
+    font-size:60px;
+    color: blueviolet;
+}
+#about div p , #sign div p{
+    color:white;
+    font-size:30px;
+    width:500px;
+    margin-top:20px;
+}
+#about div button , #sign div button{
+    padding:20px 40px;
+    background-image: linear-gradient(to right,orange,red,purple);
+    border:none;
+    text-transform: capitalize;
+    font-size:20px;
+    margin-top:30px;
+    cursor: pointer;
+}
+#about div button:hover{
+    background-image:  linear-gradient(rgb(69, 238, 187),rgb(69, 238, 187));
+}
+
+#services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    padding:0;
+}
+#services h2{
+    font-size: 40px;
+    text-transform:capitalize;
+    background: -webkit-linear-gradient(right,rgb(224, 11, 128),rgb(241, 175, 33));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom:60px;
+}
+#services div{
+    display: flex;
+    justify-content: center;
+    line-height:30px;
+}
+#services div span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin-right:20px;
+    background-color: aquamarine;
+    padding:150px 50px;
+    width:150%;
+    text-align: center;
+    line-height:35px;
+    text-transform: capitalize;
+    color:white;
+    cursor: pointer;
+} 
+#services div span h4{
+    font-size:20px;
+    width:150%;
+    text-align: center;
+}
+#services div span p{
+    width:150%;
+}
+#services div span button{
+    text-transform: capitalize;
+    padding:10px 20px;
+    border:none;
+    background-color:black;
+    margin-top:5px;
+}
+.card1{
+    background-image:linear-gradient( to right,rgb(30, 238, 210) ,rgb(16, 16, 223) ,rgb(241, 37, 241));
+}
+.card2{
+    background-image: linear-gradient(rgb(106, 238, 227),rgb(20, 158, 238));
+}
+.card3{
+    background-image: linear-gradient(120deg,blue 10%,red,yellow);
+}
+.card4{
+    background-image:linear-gradient( to right,rgb(30, 238, 210) ,rgb(16, 16, 223) ,rgb(241, 37, 241));
+}
+#services div span:hover{
+    transform: scale(1.05);
+}
+
+
+#sign{
+    height:79vh;
+    display: flex;
+    justify-content: center;
+    padding:3% 5% 0 0;
+    align-items: center;
+}
+#sign div h2{
+    text-transform: capitalize;
+}
+#sign i{
+    padding:8% 8%;
+    background-image: linear-gradient(200deg , rgb(255, 166, 0) , rgb(248, 9, 168));
+}
+#sign div button:hover{
+    background-image: linear-gradient( rgb(248, 9, 168),rgb(248, 9, 168));
+}
+
+
+#lastSection{
+    display: flex;
+    justify-content: center;
+    padding:5% 0;
+    height:30vh;
+}
+#lastSection div{
+    margin-right:50px;
+    text-transform: capitalize;
+    color:white;
+}
+#lastSection div h4{
+    font-weight: bold;
+    font-size:23px;
+    margin-bottom:15px;
+}
+#lastSection div ul li{
+    list-style: none;
+    margin-bottom:5px;
+}
+
+footer{
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:2% 15%;
+}
+footer h2{
+    text-transform: uppercase;
+}
+footer span i{
+    font-size:25px;
+    margin-right:3px;
+}
+
+@media (max-width:480px) and (min-width:320px){
+    .container{
+        padding:20px 20px 20px 20px;
+    }
+    header nav ul{
+        flex-direction: column;
+        position:absolute;
+        top:75px;
+        left:0;
+        background-color: black;
+        width:100%;
+        padding: 20px 30px;
+        visibility: hidden;
+        transition: all 0s ease;
+    }
+    header nav ul li{
+        padding:5px 0;
+        width:100%;
+        text-align: center;
+        font-size:20px;
+        transition: all 0s ease;
+    }
+    header nav ul li a{
+        width:inherit !important;
+        display: inline-block;
+        height:50px;
+        transition: all 0s ease;
+    }
+    header nav i{
+        visibility: visible;
+        transition: all 0s ease;
+    }
+    header nav ul li button{
+        width:100%;
+        padding:10px;
+        font-size:20px;
+        transition: all 0s ease; 
+    }
+
+    #home{
+        line-height:80px;
+        height: 64vh;
+    }
+    #home h1{
+        font-size: 10vw;
+    }
+    #home h3{
+        font-size: 7vw;
+    }
+    #home button {
+        padding:20px 12vw;
+    }
+
+    #about{
+        flex-direction: column;
+        padding: 0 20px;
+        height: 109vh;
+    }
+    #about i, #sign i {
+        padding: 8% 10%;
+    }
+    #about div{
+        margin-left:0px;
+        margin-top:50px;
+        text-align: center;
+        width:fit-content;
+    }
+    #about div h4{
+        font-size: 8vw;
+    }
+    #about div h2{
+        font-size: 11vw;
+        width: 90vw;
+    }
+    #about div p{
+        font-size: 6vw;
+        width: 92vw;
+    }
+    #about div button{
+        padding: 20px 8vw;
+        font-size: 3vh;
+    }
+
+    #services{
+       height:259vh;
+       text-align: center; 
+    }
+    #services div{
+        flex-direction:column;
+        flex-wrap: wrap;
+    }
+    #services div span {
+        margin-right:0;
+        padding: 134px 44px;
+        width: 100%;
+        margin-bottom:15px;
+    }
+
+    #sign{
+        flex-direction: column;
+        height: 120vh;
+        text-align: center;
+        padding-left: 5%;
+    }
+    #sign div {
+        width: 89vw;
+        margin-left:0;
+    }
+    #sign div h4 {
+        font-size: 20px;
+    }
+    #sign div h2 {
+        font-size: 14vw;
+    }
+    #sign div h4 {
+        font-size: 8vw;
+    }
+    #sign div p {
+        font-size: 10vw;
+        width: 89vw;
+    }
+    #sign div button {
+        padding: 20px 7vh;
+    }
+    #sign i {
+        padding: 11% 10%;
+        margin-top: 28px;
+        font-size: 182px;
+    }
+
+
+    #lastSection {
+        height: 48vh;
+        flex-wrap: wrap;
+        width: 114vw;
+        justify-content: center;
+        padding: 5% 8%;
+        align-items: center;
+    }
+    #lastSection div {
+        margin-right:14vw;
+        margin-top: 20px;
+    }    
+
+
+    footer{
+        flex-direction: column;
+        padding: 11% 10% 0;
+        justify-content: space-between;
+        height: 135px;
+    }
+    footer p{
+        width:100%;
+    }
+}
+@media (max-width:680px) and (min-width:481px){
+    .container{
+        padding:20px 20px 20px 20px;
+    }
+    header nav ul{
+        flex-direction: column;
+        position:absolute;
+        top:75px;
+        left:0;
+        background-color: black;
+        width:100%;
+        padding: 20px 30px;
+        visibility: hidden;
+        transition: all 0s ease;
+    }
+    header nav ul li{
+        padding:5px 0;
+        width:100%;
+        text-align: center;
+        font-size:20px;
+        transition: all 0s ease;
+    }
+    header nav ul li a{
+        width:inherit !important;
+        display: inline-block;
+        height:50px;
+        transition: all 0s ease;
+    }
+    header nav i{
+        visibility: visible;
+        transition: all 0s ease;
+    }
+    header nav ul li button{
+        width:100%;
+        padding:10px;
+        font-size:20px;
+        transition: all 0s ease; 
+    }
+
+
+    #home{
+        line-height:80px;
+        height: 74vh;
+    }
+    #home h1{
+        font-size: 10vw;
+    }
+    #home h3{
+        font-size: 7vw;
+    }
+    #home button {
+        padding:20px 12vw;
+    }
+
+
+    #about{
+        flex-direction: column;
+        padding: 0 20px;
+        height: 132vh;
+    }
+    #about i, #sign i {
+        padding: 8% 10%;
+    }
+    #about div{
+        margin-left:0px;
+        margin-top:50px;
+        text-align: center;
+        width:fit-content;
+    }
+    #about div h4{
+        font-size: 8vw;
+    }
+    #about div h2{
+        font-size: 11vw;
+        width: 90vw;
+    }
+    #about div p{
+        font-size: 6vw;
+        width: 92vw;
+    }
+    #about div button{
+        padding: 20px 8vw;
+        font-size: 3vh;
+    }
+
+
+    #services{
+        height:142vh;
+        text-align: center; 
+     }
+     #services div{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 7px
+     }
+     #services div span {
+        margin-right: 10px;
+        padding: 134px 44px;
+        width: 44vw;
+        margin-bottom: 15px;
+     }
+
+
+     #sign{
+        flex-direction: column;
+        height: 144vh;
+        text-align: center;
+        padding-left: 5%;
+    }
+    #sign div {
+        width: 89vw;
+        margin-left:0;
+    }
+    #sign div h4 {
+        font-size: 20px;
+    }
+    #sign div h2 {
+        font-size: 14vw;
+    }
+    #sign div h4 {
+        font-size: 8vw;
+    }
+    #sign div p {
+        font-size: 10vw;
+        width: 89vw;
+    }
+    #sign div button {
+        padding: 20px 7vh;
+    }
+    #sign i {
+        padding: 11% 10%;
+        margin-top:47px;
+        font-size: 182px;
+    }
+
+    #lastSection {
+        height: 48vh;
+        flex-wrap: wrap;
+        width: 114vw;
+        justify-content: center;
+        padding: 5% 8%;
+        align-items: center;
+    }
+    #lastSection div {
+        margin-right:14vw;
+        margin-top: 20px;
+    }    
+
+    footer{
+        flex-direction: column;
+        padding: 11% 10% 0;
+        justify-content: space-between;
+        height: 135px;
+    }
+    footer p{
+        width:100%;
+    }
+}
+@media (max-width:1115px) and (min-width:681px){
+    #home h1{
+        font-size: 10vw;
+    }
+
+    #about div button{
+        padding: 3vh 4vw;
+    }
+    #about div p{
+        font-size: 3vw;
+        width: 46vw;
+    }
+    #about div h2{
+        font-size: 4vw;
+    }
+    #about div{
+        margin-left: 3vw;
+        padding-right: 2%;
+    }
+    #about i{
+        font-size: 22vw;
+    }
+    #about{
+    padding: 2% 2% 8%;
+    height: 60%;
+    }
+
+    #services {
+        padding: 0 0 8% 2%;
+        height: 170%;
+    }
+    #services div{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 7px
+     }
+     #services div span {
+        margin-right: 10px;
+        padding: 134px 44px;
+        width:300px;
+        margin-bottom: 15px;
+     }
+
+    #sign div button {
+        padding: 3vh 4vw;
+    }
+    #sign  div p{
+        font-size: 3vw;
+        width: 46vw;
+    }
+    #sign  div h2{
+        font-size: 4vw;
+    }
+    #sign  div{
+        margin-left: 3vw;
+        padding-right: 2%;
+    }
+    #sign  i{
+        font-size: 22vw;
+    }
+    #sign {
+    padding: 2%;
+    height: 60%;
+    }
+}
